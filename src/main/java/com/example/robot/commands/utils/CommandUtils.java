@@ -4,6 +4,7 @@ import com.example.robot.commands.data.CommandEnum;
 import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.DirectionEnum;
 import com.example.robot.commands.data.StatusContext;
+import com.example.robot.commands.service.LeftCommand;
 import com.example.robot.commands.service.PlaceCommand;
 import com.example.robot.commands.service.ReportCommand;
 import com.example.robot.commands.service.RightCommand;
@@ -83,6 +84,19 @@ public class CommandUtils {
     }
 
     /**
+     * This method will return a LEFT command from the given string. e.g. "LEFT"
+     * @param command: LEFT command in a String format
+     * @return ReportCommand: Report command to apply
+     * @throws CommandException: If no valid command is found. The message is 'Invalid command'
+     */
+    public static LeftCommand parseLeftCommand(String command) throws  CommandException{
+        if(parseCommand(command) == CommandEnum.LEFT){
+            return new LeftCommand();
+        }
+        throw new CommandException("Invalid command");
+    }
+
+    /**
      * This method will execute set of commands separated by new line character
      *
      * @param context: Context on which this set of commands will be applied
@@ -103,6 +117,9 @@ public class CommandUtils {
                     break;
                 case RIGHT:
                     context = CommandUtils.parseRightCommand(commandInput).apply(context);
+                    break;
+                case LEFT:
+                    context = CommandUtils.parseLeftCommand(commandInput).apply(context);
                     break;
             }
 
