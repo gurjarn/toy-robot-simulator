@@ -6,6 +6,7 @@ import com.example.robot.commands.data.DirectionEnum;
 import com.example.robot.commands.data.StatusContext;
 import com.example.robot.commands.service.PlaceCommand;
 import com.example.robot.commands.service.ReportCommand;
+import com.example.robot.commands.service.RightCommand;
 
 public class CommandUtils {
 
@@ -69,6 +70,19 @@ public class CommandUtils {
     }
 
     /**
+     * This method will return a RIGHT command from the given string. e.g. "RIGHT"
+     * @param command: RIGHT command in a String format
+     * @return ReportCommand: Report command to apply
+     * @throws CommandException: If no valid command is found. The message is 'Invalid command'
+     */
+    public static RightCommand parseRightCommand(String command) throws  CommandException{
+        if(parseCommand(command) == CommandEnum.RIGHT){
+            return new RightCommand();
+        }
+        throw new CommandException("Invalid command");
+    }
+
+    /**
      * This method will execute set of commands separated by new line character
      *
      * @param context: Context on which this set of commands will be applied
@@ -86,6 +100,9 @@ public class CommandUtils {
                     break;
                 case REPORT:
                     context = CommandUtils.parseReportCommand(commandInput).apply(context);
+                    break;
+                case RIGHT:
+                    context = CommandUtils.parseRightCommand(commandInput).apply(context);
                     break;
             }
 

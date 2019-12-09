@@ -36,6 +36,7 @@ public class PlaceCommand {
             context.setPositionX(this.placeX);
             context.setPositionY(this.placeY);
             context.setDirection(this.placeDirection);
+            context.setPlaced(true);
 
             return context;
         }else{
