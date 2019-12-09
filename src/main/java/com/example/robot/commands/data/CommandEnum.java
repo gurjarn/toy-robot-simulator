@@ -8,5 +8,5 @@ public enum CommandEnum {
     PLACE,
     MOVE,
     LEFT,
-    RIGHT;
+    RIGHT
 }
