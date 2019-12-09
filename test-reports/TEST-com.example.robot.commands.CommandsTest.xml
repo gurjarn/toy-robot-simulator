@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.robot.commands.CommandsTest" time="0.384" tests="59" errors="0" skipped="0" failures="15">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.robot.commands.CommandsTest" time="0.3" tests="59" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="D:\data\softwares\Java\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\d856023\AppData\Local\Temp\surefire3631465751886787020\surefirebooter353786450806164512.jar C:\Users\d856023\AppData\Local\Temp\surefire3631465751886787020 2019-12-09T21-50-20_653-jvmRun1 surefire3527267569343119909tmp surefire_06989742260655152068tmp"/>
+    <property name="sun.java.command" value="C:\Users\d856023\AppData\Local\Temp\surefire4326689509591440121\surefirebooter498762289855755385.jar C:\Users\d856023\AppData\Local\Temp\surefire4326689509591440121 2019-12-09T22-21-53_575-jvmRun1 surefire7442161815349339470tmp surefire_08844378947727300491tmp"/>
     <property name="surefire.test.class.path" value="D:\data\intJWorkspace\toy-robot-simulator\target\test-classes;D:\data\intJWorkspace\toy-robot-simulator\target\classes;C:\Users\d856023\.m2\repository\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\d856023\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\d856023\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\d856023"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\d856023\AppData\Local\Temp\surefire3631465751886787020\surefirebooter353786450806164512.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\d856023\AppData\Local\Temp\surefire4326689509591440121\surefirebooter498762289855755385.jar"/>
     <property name="sun.boot.class.path" value="D:\data\softwares\Java\jre\lib\resources.jar;D:\data\softwares\Java\jre\lib\rt.jar;D:\data\softwares\Java\jre\lib\sunrsasign.jar;D:\data\softwares\Java\jre\lib\jsse.jar;D:\data\softwares\Java\jre\lib\jce.jar;D:\data\softwares\Java\jre\lib\charsets.jar;D:\data\softwares\Java\jre\lib\jfr.jar;D:\data\softwares\Java\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,123 +60,63 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testOperation{String, String}[1]" classname="com.example.robot.commands.CommandsTest" time="0.066">
-    <failure message="expected: &lt;0,1,NORTH&gt; but was: &lt;0,0,NORTH&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0,1,NORTH> but was: <0,0,NORTH>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[2]" classname="com.example.robot.commands.CommandsTest" time="0.015"/>
-  <testcase name="testOperation{String, String}[3]" classname="com.example.robot.commands.CommandsTest" time="0">
-    <failure message="expected: &lt;3,3,NORTH&gt; but was: &lt;1,2,NORTH&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <3,3,NORTH> but was: <1,2,NORTH>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[4]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[1]" classname="com.example.robot.commands.CommandsTest" time="0.055"/>
+  <testcase name="testOperation{String, String}[2]" classname="com.example.robot.commands.CommandsTest" time="0.009"/>
+  <testcase name="testOperation{String, String}[3]" classname="com.example.robot.commands.CommandsTest" time="0.003"/>
+  <testcase name="testOperation{String, String}[4]" classname="com.example.robot.commands.CommandsTest" time="0.003"/>
   <testcase name="testOperation{String, String}[5]" classname="com.example.robot.commands.CommandsTest" time="0"/>
   <testcase name="testOperation{String, String}[6]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[7]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[8]" classname="com.example.robot.commands.CommandsTest" time="0.005"/>
-  <testcase name="testOperation{String, String}[9]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[10]" classname="com.example.robot.commands.CommandsTest" time="0.002"/>
-  <testcase name="testOperation{String, String}[11]" classname="com.example.robot.commands.CommandsTest" time="0.004"/>
+  <testcase name="testOperation{String, String}[7]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[8]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[9]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[10]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[11]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
   <testcase name="testOperation{String, String}[12]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[13]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[14]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[13]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[14]" classname="com.example.robot.commands.CommandsTest" time="0.002"/>
   <testcase name="testOperation{String, String}[15]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[16]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[16]" classname="com.example.robot.commands.CommandsTest" time="0"/>
   <testcase name="testOperation{String, String}[17]" classname="com.example.robot.commands.CommandsTest" time="0.002"/>
-  <testcase name="testOperation{String, String}[18]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[18]" classname="com.example.robot.commands.CommandsTest" time="0"/>
   <testcase name="testOperation{String, String}[19]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[20]" classname="com.example.robot.commands.CommandsTest" time="0.001">
-    <failure message="expected: &lt;2,3,EAST&gt; but was: &lt;1,3,EAST&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <2,3,EAST> but was: <1,3,EAST>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[21]" classname="com.example.robot.commands.CommandsTest" time="0.002">
-    <failure message="expected: &lt;2,1,WEST&gt; but was: &lt;3,1,WEST&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <2,1,WEST> but was: <3,1,WEST>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[22]" classname="com.example.robot.commands.CommandsTest" time="0">
-    <failure message="expected: &lt;0,4,NORTH&gt; but was: &lt;0,3,NORTH&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0,4,NORTH> but was: <0,3,NORTH>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[23]" classname="com.example.robot.commands.CommandsTest" time="0.002">
-    <failure message="expected: &lt;4,3,SOUTH&gt; but was: &lt;4,4,SOUTH&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <4,3,SOUTH> but was: <4,4,SOUTH>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[24]" classname="com.example.robot.commands.CommandsTest" time="0.002">
-    <failure message="expected: &lt;3,3,EAST&gt; but was: &lt;1,3,EAST&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <3,3,EAST> but was: <1,3,EAST>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[25]" classname="com.example.robot.commands.CommandsTest" time="0.003">
-    <failure message="expected: &lt;1,1,WEST&gt; but was: &lt;3,1,WEST&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1,1,WEST> but was: <3,1,WEST>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[26]" classname="com.example.robot.commands.CommandsTest" time="0.002">
-    <failure message="expected: &lt;0,4,NORTH&gt; but was: &lt;0,2,NORTH&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0,4,NORTH> but was: <0,2,NORTH>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[27]" classname="com.example.robot.commands.CommandsTest" time="0.002">
-    <failure message="expected: &lt;4,2,SOUTH&gt; but was: &lt;4,4,SOUTH&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <4,2,SOUTH> but was: <4,4,SOUTH>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[28]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[20]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[21]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[22]" classname="com.example.robot.commands.CommandsTest" time="0.003"/>
+  <testcase name="testOperation{String, String}[23]" classname="com.example.robot.commands.CommandsTest" time="0.002"/>
+  <testcase name="testOperation{String, String}[24]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[25]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[26]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[27]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[28]" classname="com.example.robot.commands.CommandsTest" time="0.002"/>
   <testcase name="testOperation{String, String}[29]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[30]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[30]" classname="com.example.robot.commands.CommandsTest" time="0.006"/>
   <testcase name="testOperation{String, String}[31]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[32]" classname="com.example.robot.commands.CommandsTest" time="0.002"/>
-  <testcase name="testOperation{String, String}[33]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[34]" classname="com.example.robot.commands.CommandsTest" time="0.003"/>
+  <testcase name="testOperation{String, String}[32]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[33]" classname="com.example.robot.commands.CommandsTest" time="0.011"/>
+  <testcase name="testOperation{String, String}[34]" classname="com.example.robot.commands.CommandsTest" time="0"/>
   <testcase name="testOperation{String, String}[35]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[36]" classname="com.example.robot.commands.CommandsTest" time="0.006"/>
+  <testcase name="testOperation{String, String}[36]" classname="com.example.robot.commands.CommandsTest" time="0.004"/>
   <testcase name="testOperation{String, String}[37]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[38]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[39]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[40]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
-  <testcase name="testOperation{String, String}[41]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[42]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[43]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[38]" classname="com.example.robot.commands.CommandsTest" time="0.002"/>
+  <testcase name="testOperation{String, String}[39]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[40]" classname="com.example.robot.commands.CommandsTest" time="0.002"/>
+  <testcase name="testOperation{String, String}[41]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[42]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[43]" classname="com.example.robot.commands.CommandsTest" time="0.004"/>
   <testcase name="testOperation{String, String}[44]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[45]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
-  <testcase name="testOperation{String, String}[46]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[47]" classname="com.example.robot.commands.CommandsTest" time="0.004"/>
+  <testcase name="testOperation{String, String}[45]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[46]" classname="com.example.robot.commands.CommandsTest" time="0.004"/>
+  <testcase name="testOperation{String, String}[47]" classname="com.example.robot.commands.CommandsTest" time="0.003"/>
   <testcase name="testOperation{String, String}[48]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[49]" classname="com.example.robot.commands.CommandsTest" time="0.005"/>
-  <testcase name="testOperation{String, String}[50]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[51]" classname="com.example.robot.commands.CommandsTest" time="0.003"/>
-  <testcase name="testOperation{String, String}[52]" classname="com.example.robot.commands.CommandsTest" time="0.002">
-    <failure message="expected: &lt;4,1,EAST&gt; but was: &lt;3,1,EAST&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <4,1,EAST> but was: <3,1,EAST>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[53]" classname="com.example.robot.commands.CommandsTest" time="0.003">
-    <failure message="expected: &lt;3,4,NORTH&gt; but was: &lt;3,3,NORTH&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <3,4,NORTH> but was: <3,3,NORTH>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[54]" classname="com.example.robot.commands.CommandsTest" time="0.01">
-    <failure message="expected: &lt;0,3,NORTH&gt; but was: &lt;1,3,WEST&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0,3,NORTH> but was: <1,3,WEST>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[55]" classname="com.example.robot.commands.CommandsTest" time="0">
-    <failure message="expected: &lt;1,0,SOUTH&gt; but was: &lt;1,1,SOUTH&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1,0,SOUTH> but was: <1,1,SOUTH>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testOperation{String, String}[56]" classname="com.example.robot.commands.CommandsTest" time="0.004"/>
+  <testcase name="testOperation{String, String}[49]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[50]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[51]" classname="com.example.robot.commands.CommandsTest" time="0.015"/>
+  <testcase name="testOperation{String, String}[52]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[53]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[54]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[55]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[56]" classname="com.example.robot.commands.CommandsTest" time="0"/>
   <testcase name="testOperation{String, String}[57]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[58]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[59]" classname="com.example.robot.commands.CommandsTest" time="0">
-    <failure message="expected: &lt;Please use PLACE command to begin&gt; but was: &lt;0,0,null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Please use PLACE command to begin> but was: <0,0,null>
-	at com.example.robot.commands.CommandsTest.testOperation(CommandsTest.java:37)
-]]></failure>
-  </testcase>
+  <testcase name="testOperation{String, String}[58]" classname="com.example.robot.commands.CommandsTest" time="0.003"/>
+  <testcase name="testOperation{String, String}[59]" classname="com.example.robot.commands.CommandsTest" time="0"/>
 </testsuite>
