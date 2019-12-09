@@ -85,7 +85,7 @@ Expected output
 
 # Implementation
 
-###Overarching design (Beta)
+### Overarching design (Beta)
 
 The application is consisting of two components, user input and command execution
 
@@ -100,7 +100,21 @@ A command will change the context based on the set of conditions and return the 
 
 # Test cases
 
-TBD 
+There are two test case files to test each component.
+`com.example.robot.commands.CommandsTest`
+`com.example.robot.ApplicationTest`
+
+The `CommandsTest` is parameterized and takes its test parameters from resource file `src/test/resources/command_test.csv`
+
+Sample data in `command_test.csv` file
+```$xslt
+# "expected message", "new line separated list of commands"
+"0,1,NORTH","PLACE 0,0,NORTH
+MOVE
+REPORT",
+```
+
+`ApplicationTest` is for user input module
 
 # Installation
 
