@@ -21,13 +21,13 @@ public class PlaceCommand {
     /**
      * This method will apply current command parameters on the given context
      * @param context: Context on which this command will be applied
-     * @return: StatusContext: Updated status context
+     * @return StatusContext: Updated status context
      * @throws CommandException: If invalid parameters are found. The message is 'Invalid command'
      */
     public StatusContext apply(StatusContext context) throws CommandException {
 
         //Check if the parameters are valid
-        if(this.placeX >= MIN_Y_MOVEMENT
+        if(this.placeX >= MIN_X_MOVEMENT
                 && this.placeX <= MAX_X_MOVEMENT
                 && this.placeY >= MIN_Y_MOVEMENT
                 && this.placeY <= MAX_Y_MOVEMENT){
