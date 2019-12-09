@@ -13,6 +13,8 @@ public class StatusContext implements Serializable {
     private int positionY;
     private DirectionEnum direction;
 
+    private boolean isPlaced;
+
     @Override
     public String toString(){
         return String.format("%d,%d,%s",getPositionX(),getPositionY(),getDirection());
