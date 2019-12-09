@@ -53,6 +53,8 @@ REPORT",
 "Invalid command","PLACE 5,1,WEST",
 "Invalid command","PLACE 6,5,NORTH",
 "Invalid command","PLACE 10,11,SOUTH",
+"Invalid command","JUMP",
+"Invalid command","",
 
 # Testing MOVE command
 
