@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.robot.ApplicationTest" time="0.068" tests="4" errors="0" skipped="0" failures="4">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\data\intJWorkspace\toy-robot-simulator\target\test-classes;D:\data\intJWorkspace\toy-robot-simulator\target\classes;C:\Users\d856023\.m2\repository\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\d856023\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\d856023\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Australia/Sydney"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="user.country" value="AU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="D:\data\softwares\Java\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\d856023\AppData\Local\Temp\surefire4164356471541668638\surefirebooter5587634304125039173.jar C:\Users\d856023\AppData\Local\Temp\surefire4164356471541668638 2019-12-09T21-34-48_812-jvmRun1 surefire7927609556648935135tmp surefire_03427182415701840401tmp"/>
+    <property name="surefire.test.class.path" value="D:\data\intJWorkspace\toy-robot-simulator\target\test-classes;D:\data\intJWorkspace\toy-robot-simulator\target\classes;C:\Users\d856023\.m2\repository\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\d856023\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\d856023\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\d856023"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="D:\data\softwares\Java\jre"/>
+    <property name="basedir" value="D:\data\intJWorkspace\toy-robot-simulator"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\d856023\AppData\Local\Temp\surefire4164356471541668638\surefirebooter5587634304125039173.jar"/>
+    <property name="sun.boot.class.path" value="D:\data\softwares\Java\jre\lib\resources.jar;D:\data\softwares\Java\jre\lib\rt.jar;D:\data\softwares\Java\jre\lib\sunrsasign.jar;D:\data\softwares\Java\jre\lib\jsse.jar;D:\data\softwares\Java\jre\lib\jce.jar;D:\data\softwares\Java\jre\lib\charsets.jar;D:\data\softwares\Java\jre\lib\jfr.jar;D:\data\softwares\Java\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_151-b12"/>
+    <property name="user.name" value="d856023"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="6.1"/>
+    <property name="java.endorsed.dirs" value="D:\data\softwares\Java\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\d856023\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\d856023\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_151"/>
+    <property name="user.dir" value="D:\data\intJWorkspace\toy-robot-simulator"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.library.path" value="D:\data\softwares\Java\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\d856023\bin;D:\data\softwares\Git\mingw64\bin;D:\data\softwares\Git\usr\local\bin;D:\data\softwares\Git\usr\bin;D:\data\softwares\Git\usr\bin;D:\data\softwares\Git\mingw64\bin;D:\data\softwares\Git\usr\bin;C:\Users\d856023\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Microsoft Application Virtualization Client;C:\Program Files (x86)\Lenovo\Access Connections;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Sennheiser\SoftphoneSDK;D:\data\softwares\Java\bin;C:\Program Files (x86)\Google\Chrome\Application;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Microsoft Application Virtualization Client;C:\Program Files (x86)\Lenovo\Access Connections;C:\Program Files (x86)\Enterprise Vault\EVClient;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Docker Toolbox;C:\Users\d856023\AppData\Local\atom\bin;D:\data\softwares\spark-2.4.0-bin-hadoop2.7\bin;D:\data\softwares\sbt-1.2.8\sbt\bin;D:\data\softwares\apache-maven-3.5.2\bin;D:\data\softwares\kafka\kafka_2.12-2.3.1\bin\windows;D:\data\softwares\Git\usr\bin\vendor_perl;D:\data\softwares\Git\usr\bin\core_perl;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.151-b12"/>
+    <property name="java.ext.dirs" value="D:\data\softwares\Java\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testUserInputValidSelection" classname="com.example.robot.ApplicationTest" time="0.05">
+    <failure type="org.opentest4j.AssertionFailedError:">org.opentest4j.AssertionFailedError: 
+	at com.example.robot.ApplicationTest.testUserInputValidSelection(ApplicationTest.java:14)
+</failure>
+  </testcase>
+  <testcase name="testUserInputInvalidText" classname="com.example.robot.ApplicationTest" time="0.013">
+    <failure type="org.opentest4j.AssertionFailedError:">org.opentest4j.AssertionFailedError: 
+	at com.example.robot.ApplicationTest.testUserInputInvalidText(ApplicationTest.java:23)
+</failure>
+  </testcase>
+  <testcase name="testUserInputFile" classname="com.example.robot.ApplicationTest" time="0">
+    <failure type="org.opentest4j.AssertionFailedError:">org.opentest4j.AssertionFailedError: 
+	at com.example.robot.ApplicationTest.testUserInputFile(ApplicationTest.java:41)
+</failure>
+  </testcase>
+  <testcase name="testUserInputInvalidSelection" classname="com.example.robot.ApplicationTest" time="0">
+    <failure type="org.opentest4j.AssertionFailedError:">org.opentest4j.AssertionFailedError: 
+	at com.example.robot.ApplicationTest.testUserInputInvalidSelection(ApplicationTest.java:32)
+</failure>
+  </testcase>
+</testsuite>
