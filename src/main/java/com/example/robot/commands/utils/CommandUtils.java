@@ -4,10 +4,7 @@ import com.example.robot.commands.data.CommandEnum;
 import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.DirectionEnum;
 import com.example.robot.commands.data.StatusContext;
-import com.example.robot.commands.service.LeftCommand;
-import com.example.robot.commands.service.PlaceCommand;
-import com.example.robot.commands.service.ReportCommand;
-import com.example.robot.commands.service.RightCommand;
+import com.example.robot.commands.service.*;
 
 public class CommandUtils {
 
@@ -97,6 +94,19 @@ public class CommandUtils {
     }
 
     /**
+     * This method will return a MOVE command from the given string. e.g. "MOVE"
+     * @param command: MOVE command in a String format
+     * @return ReportCommand: Report command to apply
+     * @throws CommandException: If no valid command is found. The message is 'Invalid command'
+     */
+    public static MoveCommand parseMoveCommand(String command) throws  CommandException{
+        if(parseCommand(command) == CommandEnum.MOVE){
+            return new MoveCommand();
+        }
+        throw new CommandException("Invalid command");
+    }
+
+    /**
      * This method will execute set of commands separated by new line character
      *
      * @param context: Context on which this set of commands will be applied
@@ -120,6 +130,9 @@ public class CommandUtils {
                     break;
                 case LEFT:
                     context = CommandUtils.parseLeftCommand(commandInput).apply(context);
+                    break;
+                case MOVE:
+                    context = CommandUtils.parseMoveCommand(commandInput).apply(context);
                     break;
             }
 

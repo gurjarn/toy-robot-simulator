@@ -21,7 +21,11 @@ public class ReportCommand{
      */
     public StatusContext apply(StatusContext context) throws CommandException {
 
-        //The report command is not required to change status context
-        return context;
+        if(context.isPlaced()) {
+            //The report command is not required to change status context
+            return context;
+        }else{
+            throw new CommandException("Please use PLACE command to begin");
+        }
     }
 }
