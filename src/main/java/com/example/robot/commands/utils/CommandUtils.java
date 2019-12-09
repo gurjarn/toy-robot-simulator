@@ -5,6 +5,7 @@ import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.DirectionEnum;
 import com.example.robot.commands.data.StatusContext;
 import com.example.robot.commands.service.PlaceCommand;
+import com.example.robot.commands.service.ReportCommand;
 
 public class CommandUtils {
 
@@ -35,7 +36,7 @@ public class CommandUtils {
     /**
      * This method will return a PLACE command from the given string. e.g. "PLACE 1,3,EAST"
      * @param command: PLACE command in a String format
-     * @return: PlaceCommand: Place command to apply
+     * @return PlaceCommand: Place command to apply
      * @throws CommandException: If no valid command is found. The message is 'Invalid command'
      */
     public static PlaceCommand parsePlaceCommand(String command) throws  CommandException{
@@ -43,9 +44,9 @@ public class CommandUtils {
             //parse parameters
             String[] params = command.replace(CommandEnum.PLACE.name(),"").trim().split(",");
 
-            if(params != null && params.length == 3){
+            if(params.length == 3){
                 try {
-                    return new PlaceCommand(Integer.valueOf(params[0]), Integer.valueOf(params[1]), DirectionEnum.valueOf(params[2]));
+                    return new PlaceCommand(Integer.parseInt(params[0]), Integer.parseInt(params[1]), DirectionEnum.valueOf(params[2]));
                 }catch(IllegalArgumentException in){
                     throw new CommandException("Invalid command");
                 }
@@ -55,11 +56,24 @@ public class CommandUtils {
     }
 
     /**
+     * This method will return a REPORT command from the given string. e.g. "REPORT"
+     * @param command: REPORT command in a String format
+     * @return ReportCommand: Report command to apply
+     * @throws CommandException: If no valid command is found. The message is 'Invalid command'
+     */
+    public static ReportCommand parseReportCommand(String command) throws  CommandException{
+        if(parseCommand(command) == CommandEnum.REPORT){
+            return new ReportCommand();
+        }
+        throw new CommandException("Invalid command");
+    }
+
+    /**
      * This method will execute set of commands separated by new line character
      *
      * @param context: Context on which this set of commands will be applied
      * @param commandList: New line separated list of commands
-     * @return: StatusContext: Updated status context after applying commands
+     * @return StatusContext: Updated status context after applying commands
      * @throws CommandException: If no valid command is found. The message is 'Invalid command'
      */
     public static StatusContext executeCommands(StatusContext context, String commandList) throws CommandException {
@@ -68,8 +82,11 @@ public class CommandUtils {
 
             switch (CommandUtils.parseCommand(commandInput)) {
                 case PLACE:
-                    PlaceCommand command = CommandUtils.parsePlaceCommand(commandInput);
-                    context = command.apply(context);
+                    context = CommandUtils.parsePlaceCommand(commandInput).apply(context);
+                    break;
+                case REPORT:
+                    context = CommandUtils.parseReportCommand(commandInput).apply(context);
+                    break;
             }
 
         }
