@@ -150,3 +150,23 @@ Run program with file input
 ```
 java -jar target/toy-robot-simulator.jar --file src/test/resources/file_input_test1.txt
 ```
+
+### Docker support
+
+The program can be built into Docker image using following commands
+
+Build docker image
+```
+docker image build -t toy-robot-simulator:latest .
+```
+
+Run docker image
+```
+docker run -it --rm --name toy-robot toy-robot-simulator
+```
+
+Run docker image with parameters
+
+```
+docker run -it --rm -v  $(pwd)/src/test/resources/file_input_test1.txt:/commands.txt --name toy-robot toy-robot-simulator --file /commands.txt
+```
