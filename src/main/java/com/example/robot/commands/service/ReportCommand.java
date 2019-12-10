@@ -23,6 +23,7 @@ public class ReportCommand{
 
         if(context.isPlaced()) {
             //The report command is not required to change status context
+            System.out.println(context.toString());
             return context;
         }else{
             throw new CommandException("Please use PLACE command to begin");
