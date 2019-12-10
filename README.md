@@ -92,24 +92,73 @@ The application is consisting of two components, user input and command executio
 User will be able to provide individual commands like PLACE, LEFT etc through option selection on screen. 
 User can alternatively choose to provide file as an input containing list of commands 
 
+##### Overarching design diagram
 ![Overarching design](images/overarching.JPG)
 
 Each command will be interpreted and converted to a command (Command pattern) which will be executed on the given context. 
 A command will change the context based on the set of conditions and return the context back to the user input module to operate on next command
 
-All commands implement `ICommand` interface
+##### Sequence of events
+![Sequence of events](images/sequence-diagram.JPG)
 
 #### Adding a new command 
-e.g. JUMP 3,NORTH
+e.g. JUMP 3
 
 1. Create a class `JumpCommand` implementing `ICommand` and `IParameterized` interface. 
 The `IParameterized` interface is optional and should be implemented if a command needs to accept parameters.
- 
+
+```
+public class JumpCommand implements ICommand, IParameterized {
+    public JumpCommand(){}
+    
+    private int jumpSteps;
+    
+    @Override
+    public StatusContext apply(StatusContext context) throws CommandException {
+            if(context.isPlaced()){
+                // if context is ready to accept commands
+                //perform command action here and return updated context
+            }
+            return context;
+    }
+    
+    @Override
+    public void accept(String... parameters) throws CommandException {
+            // perform parsing of parameters here and save them in local variables
+    }
+}
+``` 
 2. Add a new enum 'JUMP' in `CommandEnum`
 
+```
+    public enum CommandEnum {
+        ..,
+        JUMP(JumpCommand.class)
+    }
+```
+Improvement note: The `CommandEnum` class can be made redundant by introducing CDI to annotate all commands with `@Command` annotation
+and auto scanning all available commands in the program. This will make addition of new commands easier
+
+#### Changing size of the board
+1. Change minimum/maximum X and minimum/maximum Y in class `com.example.robot.commands.data.Constants`
+
+```
+    // Minimum x that robot can move to
+    public static final int MIN_X_MOVEMENT = 0;
+
+    // Minimum y that robot can move to
+    public static final int MIN_Y_MOVEMENT = 0;
+
+    // Maximum x that robot can move to
+    public static final int MAX_X_MOVEMENT = 4;
+
+    // Maximum y that robot can move to
+    public static final int MAX_Y_MOVEMENT = 4;
+```
+ 
 # Test cases
 
-There are two test case files to test each component.
+Test case classes:
 `com.example.robot.commands.CommandsTest`
 `com.example.robot.system.ApplicationFileInputHandlerTest`
 `com.example.robot.system.ApplicationConsoleInputHandlerTest`
@@ -124,8 +173,8 @@ MOVE
 REPORT",
 ```
 
-`ApplicationFileInputHandlerTest` is for user file input module
-`ApplicationConsoleInputHandlerTest` is for user file input module
+`ApplicationFileInputHandlerTest` is for testing user file input module
+`ApplicationConsoleInputHandlerTest` is for testing user file input module
 
 # Installation
 
