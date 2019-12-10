@@ -15,9 +15,14 @@ public class StatusContext implements Serializable {
 
 <span class="fc" id="L16">    private boolean isPlaced;</span>
 
+
+    /**
+     * TODO: The display responsibility can be moved to different IOutput classes using SOLID principal
+     * @return
+     */
     @Override
     public String toString(){
-<span class="fc" id="L20">        return String.format(&quot;%d,%d,%s&quot;,getPositionX(),getPositionY(),getDirection());</span>
+<span class="fc" id="L25">        return String.format(&quot;%d,%d,%s&quot;,getPositionX(),getPositionY(),getDirection());</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

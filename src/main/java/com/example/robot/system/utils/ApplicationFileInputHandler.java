@@ -4,6 +4,7 @@ import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.StatusContext;
 import com.example.robot.commands.service.CommandExecutor;
 import com.example.robot.system.data.ApplicationInputException;
+import com.example.robot.system.data.IApplicationUserInputHandler;
 import org.apache.commons.cli.*;
 
 import java.io.BufferedReader;
@@ -14,7 +15,7 @@ import java.nio.file.Paths;
 /**
  * This class allows to pass commands through file option
  */
-public class ApplicationFileInputHandler {
+public class ApplicationFileInputHandler implements IApplicationUserInputHandler {
 
 
     /**
@@ -25,6 +26,7 @@ public class ApplicationFileInputHandler {
      * @throws ApplicationInputException
      * @throws CommandException
      */
+    @Override
     public StatusContext handleInput(String[] args, StatusContext context) throws ApplicationInputException, CommandException {
 
         Options options = new Options();

@@ -4,60 +4,75 @@ import com.example.robot.commands.data.CommandEnum;
 import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.StatusContext;
 import com.example.robot.commands.service.CommandExecutor;
+import com.example.robot.system.data.ApplicationInputException;
+import com.example.robot.system.data.IApplicationUserInputHandler;
 
 import java.util.Scanner;
 
-<span class="fc" id="L10">public class ApplicationConsoleInputHandler {</span>
+/**
+ * This class is a console input handler and allows user to use application interactively
+ */
+<span class="fc" id="L15">public class ApplicationConsoleInputHandler implements IApplicationUserInputHandler {</span>
 
     public int getUserSelection(Scanner inputFrom){
-<span class="nc" id="L13">        return inputFrom.nextInt();</span>
+<span class="nc" id="L18">        return inputFrom.nextInt();</span>
     }
 
     public String getCommandParameters(Scanner inputFrom){
-<span class="nc" id="L17">        return inputFrom.next();</span>
+<span class="nc" id="L22">        return inputFrom.next();</span>
     }
 
-    public StatusContext handleInput(String[] args, StatusContext context) throws CommandException {
+    /**
+     * This method will allow user to use program interactively
+     * @param args: Program arguments
+     * @param context: Status context
+     * @return StatusContext: Updated status context
+     * @throws CommandException
+     */
+    @Override
+    public StatusContext handleInput(String[] args, StatusContext context) throws ApplicationInputException,CommandException {
 
-<span class="fc" id="L22">        Scanner sn = new Scanner(System.in);</span>
+<span class="fc" id="L35">        Scanner sn = new Scanner(System.in);</span>
 
         //loop the utility in loop until the user makes the choice to exit
-<span class="fc" id="L25">        boolean circuitBreaker = true;</span>
-<span class="fc" id="L26">        CommandExecutor executor = new CommandExecutor();</span>
-<span class="fc bfc" id="L27" title="All 2 branches covered.">        while (circuitBreaker) {</span>
-            //Print the options for the user to choose from
-<span class="fc" id="L29">            System.out.println(&quot;*****Available Options*****&quot;);</span>
-<span class="fc" id="L30">            int exitOption = 0; //start of options</span>
-<span class="fc bfc" id="L31" title="All 2 branches covered.">            for (CommandEnum value : CommandEnum.values()) {</span>
+<span class="fc" id="L38">        boolean circuitBreaker = true;</span>
 
-<span class="fc" id="L33">                System.out.println(String.format(&quot;*. Press %d for %s command&quot;,value.ordinal(),value.name()));</span>
-<span class="fc" id="L34">                exitOption = value.ordinal() + 1;</span>
+<span class="fc" id="L40">        CommandExecutor executor = new CommandExecutor();</span>
+
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        while (circuitBreaker) {</span>
+            //Print the options for the user to choose from
+<span class="fc" id="L44">            System.out.println(&quot;*****Available Options*****&quot;);</span>
+<span class="fc" id="L45">            int exitOption = 0; //start of options</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">            for (CommandEnum value : CommandEnum.values()) {</span>
+
+<span class="fc" id="L48">                System.out.println(String.format(&quot;*. Press %d for %s command&quot;,value.ordinal(),value.name()));</span>
+<span class="fc" id="L49">                exitOption = value.ordinal() + 1;</span>
             }
 
-<span class="fc" id="L37">            System.out.println(String.format(&quot;*. Press %d to exit&quot;,exitOption));</span>
+<span class="fc" id="L52">            System.out.println(String.format(&quot;*. Press %d to exit&quot;,exitOption));</span>
             // Prompt the use to make a choice
-<span class="fc" id="L39">            System.out.println(&quot;Enter your choice:&quot;);</span>
+<span class="fc" id="L54">            System.out.println(&quot;Enter your choice:&quot;);</span>
 
             //Capture the user input in scanner object and store it in a variable
-<span class="fc" id="L42">            int userInput = getUserSelection(sn);</span>
+<span class="fc" id="L57">            int userInput = getUserSelection(sn);</span>
 
-<span class="fc bfc" id="L44" title="All 2 branches covered.">            if(userInput == exitOption){</span>
-<span class="fc" id="L45">                circuitBreaker = false;</span>
-<span class="pc bpc" id="L46" title="1 of 4 branches missed.">            }else if(userInput &gt;= 0 &amp;&amp; userInput &lt; CommandEnum.values().length){</span>
-<span class="fc" id="L47">                CommandEnum currentCommand = CommandEnum.values()[userInput];</span>
-<span class="fc" id="L48">                String command = currentCommand.name();</span>
-<span class="fc bfc" id="L49" title="All 2 branches covered.">                if(currentCommand == CommandEnum.PLACE){</span>
-<span class="fc" id="L50">                    System.out.println(&quot;Parameters for PLACE command e.g. 1,2,NORTH:&quot; );</span>
-<span class="fc" id="L51">                    String parameters = getCommandParameters(sn);</span>
-<span class="fc" id="L52">                    command = String.format(&quot;%s %s&quot;,command,parameters);</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">            if(userInput == exitOption){</span>
+<span class="fc" id="L60">                circuitBreaker = false;</span>
+<span class="pc bpc" id="L61" title="1 of 4 branches missed.">            }else if(userInput &gt;= 0 &amp;&amp; userInput &lt; CommandEnum.values().length){</span>
+<span class="fc" id="L62">                CommandEnum currentCommand = CommandEnum.values()[userInput];</span>
+<span class="fc" id="L63">                String command = currentCommand.name();</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">                if(currentCommand == CommandEnum.PLACE){</span>
+<span class="fc" id="L65">                    System.out.println(&quot;Parameters for PLACE command e.g. 1,2,NORTH:&quot; );</span>
+<span class="fc" id="L66">                    String parameters = getCommandParameters(sn);</span>
+<span class="fc" id="L67">                    command = String.format(&quot;%s %s&quot;,command,parameters);</span>
                 }
-<span class="fc" id="L54">                context = executor.executeCommands(context, command);</span>
-<span class="fc" id="L55">            }else {</span>
+<span class="fc" id="L69">                context = executor.executeCommands(context, command);</span>
+<span class="fc" id="L70">            }else {</span>
                 //inform user in case of invalid choice.
-<span class="fc" id="L57">                System.out.println(&quot;Invalid choice. Please choose valid option&quot;);</span>
+<span class="fc" id="L72">                System.out.println(&quot;Invalid choice. Please choose valid option&quot;);</span>
             }
-<span class="fc" id="L59">        }</span>
-<span class="fc" id="L60">        return context;</span>
+<span class="fc" id="L74">        }</span>
+<span class="fc" id="L75">        return context;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

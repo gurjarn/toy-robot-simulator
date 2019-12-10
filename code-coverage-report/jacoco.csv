@@ -8,7 +8,7 @@ com.example.robot,com.example.robot.commands.service,ReportCommand,0,17,0,2,0,6,
 com.example.robot,com.example.robot.commands.service,CommandExecutor,0,93,2,8,0,15,2,6,0,3
 com.example.robot,com.example.robot.commands.service,MoveCommand,0,48,1,14,0,18,1,10,0,2
 com.example.robot,com.example.robot.commands.service,LeftCommand,0,34,1,6,0,13,1,6,0,2
-com.example.robot,com.example.robot.commands.service,PlaceCommand,17,99,6,8,2,20,5,5,0,3
+com.example.robot,com.example.robot.commands.service,PlaceCommand,2,114,4,10,0,22,4,6,0,3
 com.example.robot,com.example.robot.commands.service,RightCommand,0,34,1,6,0,13,1,6,0,2
 com.example.robot,com.example.robot.system.data,ApplicationInputException,0,4,0,0,0,2,0,1,0,1
 com.example.robot,com.example.robot.system.utils,ApplicationConsoleInputHandler,6,131,1,11,2,27,3,7,2,2
