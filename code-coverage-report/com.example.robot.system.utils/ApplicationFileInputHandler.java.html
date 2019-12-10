@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ApplicationFileInputHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">com.example.robot</a> &gt; <a href="index.source.html" class="el_package">com.example.robot.system.utils</a> &gt; <span class="el_source">ApplicationFileInputHandler.java</span></div><h1>ApplicationFileInputHandler.java</h1><pre class="source lang-java linenums">package com.example.robot.system.utils;
+
+import com.example.robot.commands.data.CommandException;
+import com.example.robot.commands.data.StatusContext;
+import com.example.robot.commands.utils.CommandUtils;
+import com.example.robot.system.data.ApplicationInputException;
+import org.apache.commons.cli.*;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+<span class="fc" id="L14">public class ApplicationFileInputHandler {</span>
+
+
+    public StatusContext handleInput(String[] args, StatusContext context) throws ApplicationInputException, CommandException {
+
+<span class="fc" id="L19">        Options options = new Options();</span>
+
+        // setting up file option
+<span class="fc" id="L22">        Option input = new Option(&quot;f&quot;, &quot;file&quot;, true, &quot;input file path&quot;);</span>
+<span class="fc" id="L23">        input.setRequired(false);</span>
+<span class="fc" id="L24">        options.addOption(input);</span>
+
+        //setting up help option
+<span class="fc" id="L27">        Option help = new Option(&quot;h&quot;, &quot;help&quot;, false, &quot;help on using application&quot;);</span>
+<span class="fc" id="L28">        help.setRequired(false);</span>
+<span class="fc" id="L29">        options.addOption(help);</span>
+
+        //no option input
+<span class="fc" id="L32">        Option none = new Option(&quot;&quot;, &quot;No parameters to run with interactive input&quot;);</span>
+<span class="fc" id="L33">        none.setRequired(false);</span>
+<span class="fc" id="L34">        options.addOption(none);</span>
+
+<span class="fc" id="L36">        CommandLineParser parser = new DefaultParser();</span>
+<span class="fc" id="L37">        HelpFormatter formatter = new HelpFormatter();</span>
+
+        CommandLine cmd;
+
+        try {
+
+<span class="fc" id="L43">            cmd = parser.parse(options, args);</span>
+
+            //if user has provided file input option
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">            if(cmd.hasOption(&quot;file&quot;)) {</span>
+<span class="fc" id="L47">                String inputFilePath = cmd.getOptionValue(&quot;file&quot;);</span>
+
+                //read through the file and process each command
+<span class="fc" id="L50">                try(BufferedReader br = Files.newBufferedReader (Paths.get(inputFilePath))) {</span>
+                    String line;
+<span class="fc bfc" id="L52" title="All 2 branches covered.">                    while ((line = br.readLine()) != null){</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">                        if(!(line = line.trim()).isEmpty()</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">                                &amp;&amp; !line.startsWith(&quot;#&quot;)){</span>
+<span class="fc" id="L55">                            context = CommandUtils.executeCommands(context,line);</span>
+                        }
+                    }
+<span class="fc" id="L58">                } catch (IOException e) {</span>
+                    //if it fails to read the file
+<span class="fc" id="L60">                    throw new ApplicationInputException(String.format(&quot;Failed to process input file %s. Message: %s&quot;,inputFilePath,e.getMessage()));</span>
+<span class="fc" id="L61">                }</span>
+<span class="pc bnc" id="L62" title="All 2 branches missed.">            }else if(cmd.getOptions().length &gt; 0){</span>
+                //if some other option is provided. Notify correct usage
+<span class="nc" id="L64">                formatter.printHelp(&quot;toy-robot-simulator&quot;, options);</span>
+            }
+<span class="fc" id="L66">        } catch (ParseException e) {</span>
+            //if it fails to parse the option
+<span class="fc" id="L68">            formatter.printHelp(&quot;toy-robot-simulator&quot;, options);</span>
+<span class="fc" id="L69">        }</span>
+        //returning original context
+<span class="fc" id="L71">        return context;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

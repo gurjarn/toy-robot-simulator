@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Application.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">com.example.robot</a> &gt; <a href="index.source.html" class="el_package">com.example.robot</a> &gt; <span class="el_source">Application.java</span></div><h1>Application.java</h1><pre class="source lang-java linenums">package com.example.robot;
+
+import com.example.robot.commands.data.CommandException;
+import com.example.robot.commands.data.StatusContext;
+import com.example.robot.system.data.ApplicationInputException;
+import com.example.robot.system.utils.ApplicationConsoleInputHandler;
+import com.example.robot.system.utils.ApplicationFileInputHandler;
+
+/**
+ * Application launch
+ */
+<span class="nc" id="L12">public class Application {</span>
+
+    /**
+     * User can interact with the program through command line inputs or by supplying a file with set of input commands
+     *
+     * e.g
+     * 1. Supply a file with commands
+     *  [program_name] --file /file/path
+     * 2. Without any arguments. This will display different options to user to choose from
+     *
+     * @param args: User entered parameters
+     */
+    public static void main( String[] args ) {
+
+<span class="fc" id="L26">        StatusContext context = new StatusContext();</span>
+
+        //try with file input handle
+<span class="fc" id="L29">        ApplicationFileInputHandler fileInputHandler = new ApplicationFileInputHandler();</span>
+        try {
+<span class="fc" id="L31">            context = fileInputHandler.handleInput(args,context);</span>
+
+            //if context is initialized and executed
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">            if(!context.isPlaced()){</span>
+                //fall back to interactive user input
+<span class="nc" id="L36">                ApplicationConsoleInputHandler consoleInputHandler = new ApplicationConsoleInputHandler();</span>
+<span class="nc" id="L37">                consoleInputHandler.handleInput(args,context);</span>
+            }
+<span class="nc" id="L39">        } catch (ApplicationInputException | CommandException e) {</span>
+<span class="nc" id="L40">            System.out.println(e.getMessage());</span>
+<span class="fc" id="L41">        }</span>
+<span class="fc" id="L42">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
