@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PlaceCommand.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">com.example.robot</a> &gt; <a href="index.source.html" class="el_package">com.example.robot.commands.service</a> &gt; <span class="el_source">PlaceCommand.java</span></div><h1>PlaceCommand.java</h1><pre class="source lang-java linenums">package com.example.robot.commands.service;
+
+import static com.example.robot.commands.data.Constants.*;
+
+import com.example.robot.commands.data.CommandException;
+import com.example.robot.commands.data.DirectionEnum;
+import com.example.robot.commands.data.StatusContext;
+
+public class PlaceCommand {
+
+    private int placeX;
+    private int placeY;
+    private DirectionEnum placeDirection;
+
+<span class="fc" id="L15">    public PlaceCommand(int placeX, int placeY, DirectionEnum placeDirection){</span>
+<span class="fc" id="L16">        this.placeX = placeX;</span>
+<span class="fc" id="L17">        this.placeY = placeY;</span>
+<span class="fc" id="L18">        this.placeDirection = placeDirection;</span>
+<span class="fc" id="L19">    }</span>
+
+    /**
+     * This method will apply current command parameters on the given context
+     * @param context: Context on which this command will be applied
+     * @return StatusContext: Updated status context
+     * @throws CommandException: If invalid parameters are found. The message is 'Invalid command'
+     */
+    public StatusContext apply(StatusContext context) throws CommandException {
+
+        //Check if the parameters are valid
+<span class="pc bpc" id="L30" title="2 of 8 branches missed.">        if(this.placeX &gt;= MIN_X_MOVEMENT</span>
+                &amp;&amp; this.placeX &lt;= MAX_X_MOVEMENT
+                &amp;&amp; this.placeY &gt;= MIN_Y_MOVEMENT
+                &amp;&amp; this.placeY &lt;= MAX_Y_MOVEMENT){
+
+            //update current context of the robot
+<span class="fc" id="L36">            context.setPositionX(this.placeX);</span>
+<span class="fc" id="L37">            context.setPositionY(this.placeY);</span>
+<span class="fc" id="L38">            context.setDirection(this.placeDirection);</span>
+<span class="fc" id="L39">            context.setPlaced(true);</span>
+
+<span class="fc" id="L41">            return context;</span>
+        }else{
+            //invalid parameter
+<span class="fc" id="L44">            throw new CommandException(&quot;Invalid command&quot;);</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

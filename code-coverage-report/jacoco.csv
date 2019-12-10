@@ -1,0 +1,16 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+com.example.robot,com.example.robot.commands.data,Constants,3,0,0,0,1,0,1,0,1,0
+com.example.robot,com.example.robot.commands.data,CommandException,0,4,0,0,0,2,0,1,0,1
+com.example.robot,com.example.robot.commands.data,DirectionEnum,0,44,0,0,0,2,0,1,0,1
+com.example.robot,com.example.robot.commands.data,StatusContext,107,53,22,0,0,6,14,10,3,10
+com.example.robot,com.example.robot.commands.data,CommandEnum,0,54,0,0,0,6,0,1,0,1
+com.example.robot,com.example.robot.commands.service,ReportCommand,0,17,0,2,0,6,0,3,0,2
+com.example.robot,com.example.robot.commands.service,MoveCommand,0,48,1,14,0,18,1,10,0,2
+com.example.robot,com.example.robot.commands.service,LeftCommand,0,34,1,6,0,13,1,6,0,2
+com.example.robot,com.example.robot.commands.service,PlaceCommand,0,48,2,6,0,12,2,4,0,2
+com.example.robot,com.example.robot.commands.service,RightCommand,0,34,1,6,0,13,1,6,0,2
+com.example.robot,com.example.robot.system.data,ApplicationInputException,0,4,0,0,0,2,0,1,0,1
+com.example.robot,com.example.robot.system.utils,ApplicationConsoleInputHandler,6,126,1,11,2,26,3,7,2,2
+com.example.robot,com.example.robot.system.utils,ApplicationFileInputHandler,8,127,3,7,1,29,2,5,0,2
+com.example.robot,com.example.robot,Application,17,18,1,1,5,6,2,1,1,1
+com.example.robot,com.example.robot.commands.utils,CommandUtils,28,162,9,17,6,32,10,13,1,7
