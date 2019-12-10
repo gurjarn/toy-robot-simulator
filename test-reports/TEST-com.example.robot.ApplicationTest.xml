@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.robot.ApplicationTest" time="0.069" tests="4" errors="0" skipped="0" failures="4">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.robot.ApplicationTest" time="0.261" tests="6" errors="0" skipped="0" failures="3">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -7,7 +7,7 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="D:\data\intJWorkspace\toy-robot-simulator\target\test-classes;D:\data\intJWorkspace\toy-robot-simulator\target\classes;C:\Users\d856023\.m2\repository\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\d856023\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\d856023\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;"/>
+    <property name="java.class.path" value="D:\data\intJWorkspace\toy-robot-simulator\target\test-classes;D:\data\intJWorkspace\toy-robot-simulator\target\classes;C:\Users\d856023\.m2\repository\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\d856023\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\d856023\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\d856023\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -18,8 +18,9 @@
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="D:\data\softwares\Java\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\d856023\AppData\Local\Temp\surefire4326689509591440121\surefirebooter498762289855755385.jar C:\Users\d856023\AppData\Local\Temp\surefire4326689509591440121 2019-12-09T22-21-53_575-jvmRun1 surefire7442161815349339470tmp surefire_08844378947727300491tmp"/>
-    <property name="surefire.test.class.path" value="D:\data\intJWorkspace\toy-robot-simulator\target\test-classes;D:\data\intJWorkspace\toy-robot-simulator\target\classes;C:\Users\d856023\.m2\repository\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\d856023\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\d856023\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;"/>
+    <property name="sun.java.command" value="C:\Users\d856023\AppData\Local\Temp\surefire7644527982899841644\surefirebooter1829974521131884510.jar C:\Users\d856023\AppData\Local\Temp\surefire7644527982899841644 2019-12-10T11-25-27_151-jvmRun1 surefire6964091712339130390tmp surefire_069158837519219719tmp"/>
+    <property name="skip.unit.test" value="true"/>
+    <property name="surefire.test.class.path" value="D:\data\intJWorkspace\toy-robot-simulator\target\test-classes;D:\data\intJWorkspace\toy-robot-simulator\target\classes;C:\Users\d856023\.m2\repository\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\d856023\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\d856023\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\d856023\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\d856023"/>
     <property name="user.language" value="en"/>
@@ -31,7 +32,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\d856023\AppData\Local\Temp\surefire4326689509591440121\surefirebooter498762289855755385.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\d856023\AppData\Local\Temp\surefire7644527982899841644\surefirebooter1829974521131884510.jar"/>
     <property name="sun.boot.class.path" value="D:\data\softwares\Java\jre\lib\resources.jar;D:\data\softwares\Java\jre\lib\rt.jar;D:\data\softwares\Java\jre\lib\sunrsasign.jar;D:\data\softwares\Java\jre\lib\jsse.jar;D:\data\softwares\Java\jre\lib\jce.jar;D:\data\softwares\Java\jre\lib\charsets.jar;D:\data\softwares\Java\jre\lib\jfr.jar;D:\data\softwares\Java\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,24 +61,22 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testUserInputValidSelection" classname="com.example.robot.ApplicationTest" time="0.047">
+  <testcase name="testUserInputValidSelection" classname="com.example.robot.ApplicationTest" time="0.089">
     <failure type="org.opentest4j.AssertionFailedError:">org.opentest4j.AssertionFailedError: 
-	at com.example.robot.ApplicationTest.testUserInputValidSelection(ApplicationTest.java:14)
+	at com.example.robot.ApplicationTest.testUserInputValidSelection(ApplicationTest.java:18)
 </failure>
   </testcase>
   <testcase name="testUserInputInvalidText" classname="com.example.robot.ApplicationTest" time="0">
     <failure type="org.opentest4j.AssertionFailedError:">org.opentest4j.AssertionFailedError: 
-	at com.example.robot.ApplicationTest.testUserInputInvalidText(ApplicationTest.java:23)
+	at com.example.robot.ApplicationTest.testUserInputInvalidText(ApplicationTest.java:27)
 </failure>
   </testcase>
-  <testcase name="testUserInputFile" classname="com.example.robot.ApplicationTest" time="0.002">
+  <testcase name="testUserInputFileInvalidOption" classname="com.example.robot.ApplicationTest" time="0.059"/>
+  <testcase name="testUserInputFileInvalid" classname="com.example.robot.ApplicationTest" time="0.036"/>
+  <testcase name="testUserInputFile" classname="com.example.robot.ApplicationTest" time="0.058"/>
+  <testcase name="testUserInputInvalidSelection" classname="com.example.robot.ApplicationTest" time="0">
     <failure type="org.opentest4j.AssertionFailedError:">org.opentest4j.AssertionFailedError: 
-	at com.example.robot.ApplicationTest.testUserInputFile(ApplicationTest.java:41)
-</failure>
-  </testcase>
-  <testcase name="testUserInputInvalidSelection" classname="com.example.robot.ApplicationTest" time="0.002">
-    <failure type="org.opentest4j.AssertionFailedError:">org.opentest4j.AssertionFailedError: 
-	at com.example.robot.ApplicationTest.testUserInputInvalidSelection(ApplicationTest.java:32)
+	at com.example.robot.ApplicationTest.testUserInputInvalidSelection(ApplicationTest.java:36)
 </failure>
   </testcase>
 </testsuite>
