@@ -4,13 +4,15 @@ import com.example.robot.commands.data.CommandEnum;
 import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.StatusContext;
 import com.example.robot.commands.service.CommandExecutor;
+import com.example.robot.system.data.ApplicationInputException;
+import com.example.robot.system.data.IApplicationUserInputHandler;
 
 import java.util.Scanner;
 
 /**
  * This class is a console input handler and allows user to use application interactively
  */
-public class ApplicationConsoleInputHandler {
+public class ApplicationConsoleInputHandler implements IApplicationUserInputHandler {
 
     public int getUserSelection(Scanner inputFrom){
         return inputFrom.nextInt();
@@ -27,7 +29,8 @@ public class ApplicationConsoleInputHandler {
      * @return StatusContext: Updated status context
      * @throws CommandException
      */
-    public StatusContext handleInput(String[] args, StatusContext context) throws CommandException {
+    @Override
+    public StatusContext handleInput(String[] args, StatusContext context) throws ApplicationInputException,CommandException {
 
         Scanner sn = new Scanner(System.in);
 
