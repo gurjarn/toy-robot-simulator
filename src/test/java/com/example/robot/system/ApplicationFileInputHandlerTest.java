@@ -1,5 +1,6 @@
-package com.example.robot;
+package com.example.robot.system;
 
+import com.example.robot.Application;
 import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.StatusContext;
 import com.example.robot.system.data.ApplicationInputException;
@@ -7,34 +8,8 @@ import com.example.robot.system.utils.ApplicationFileInputHandler;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ApplicationTest {
+public class ApplicationFileInputHandlerTest {
 
-    /**
-     * User does valid selection
-     */
-    @Test
-    public void testUserInputValidSelection()
-    {
-        Assertions.fail();
-    }
-
-    /**
-     * User enters invalid text. e.g. PLACE x,x,NORTHEAST
-     */
-    @Test
-    public void testUserInputInvalidText()
-    {
-        Assertions.fail();
-    }
-
-    /**
-     * User does invalid selection
-     */
-    @Test
-    public void testUserInputInvalidSelection()
-    {
-        Assertions.fail();
-    }
 
     /**
      * user chooses file input option
@@ -76,5 +51,10 @@ public class ApplicationTest {
         context = fileInputHandler.handleInput(new String[]{"--xyz", "invalid/file/path"}, context);
         Assertions.assertFalse(context.isPlaced());
 
+    }
+
+    @Test
+    public void testApplicationLaunch(){
+        Application.main(new String[]{"-f","src/test/resources/file_input_test1.txt"});
     }
 }

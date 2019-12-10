@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------
-Test set: com.example.robot.ApplicationTest
+Test set: com.example.robot.system.ApplicationFileInputHandlerTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.261 s <<< FAILURE! - in com.example.robot.ApplicationTest
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.261 s <<< FAILURE! - in com.example.robot.system.ApplicationFileInputHandlerTest
 testUserInputValidSelection  Time elapsed: 0.089 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
-	at com.example.robot.ApplicationTest.testUserInputValidSelection(ApplicationTest.java:18)
+	at com.example.robot.system.ApplicationFileInputHandlerTest.testUserInputValidSelection(ApplicationTest.java:18)
 
 testUserInputInvalidText  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
-	at com.example.robot.ApplicationTest.testUserInputInvalidText(ApplicationTest.java:27)
+	at com.example.robot.system.ApplicationFileInputHandlerTest.testUserInputInvalidText(ApplicationTest.java:27)
 
 testUserInputInvalidSelection  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
-	at com.example.robot.ApplicationTest.testUserInputInvalidSelection(ApplicationTest.java:36)
+	at com.example.robot.system.ApplicationFileInputHandlerTest.testUserInputInvalidSelection(ApplicationTest.java:36)
 

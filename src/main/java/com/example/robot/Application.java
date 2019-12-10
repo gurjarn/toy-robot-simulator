@@ -3,6 +3,7 @@ package com.example.robot;
 import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.StatusContext;
 import com.example.robot.system.data.ApplicationInputException;
+import com.example.robot.system.utils.ApplicationConsoleInputHandler;
 import com.example.robot.system.utils.ApplicationFileInputHandler;
 
 /**
@@ -32,6 +33,8 @@ public class Application {
             //if context is initialized and executed
             if(!context.isPlaced()){
                 //fall back to interactive user input
+                ApplicationConsoleInputHandler consoleInputHandler = new ApplicationConsoleInputHandler();
+                consoleInputHandler.handleInput(args,context);
             }
         } catch (ApplicationInputException | CommandException e) {
             System.out.println(e.getMessage());
