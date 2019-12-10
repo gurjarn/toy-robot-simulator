@@ -55,7 +55,7 @@ public class PlaceCommand implements ICommand, IParameterized{
     @Override
     public void accept(String... parameters) throws CommandException {
 
-<span class="pc bpc" id="L58" title="2 of 4 branches missed.">        if(parameters != null &amp;&amp; parameters.length == 3){</span>
+<span class="pc bpc" id="L58" title="1 of 4 branches missed.">        if(parameters != null &amp;&amp; parameters.length == 3){</span>
             try {
 <span class="fc" id="L60">                this.placeX = Integer.parseInt(parameters[0]);</span>
 <span class="fc" id="L61">                this.placeY = Integer.parseInt(parameters[1]);</span>
@@ -64,8 +64,8 @@ public class PlaceCommand implements ICommand, IParameterized{
 <span class="fc" id="L64">                throw new CommandException(String.format(&quot;Invalid parameters for PLACE command: %s&quot;, Arrays.asList(parameters)));</span>
 <span class="fc" id="L65">            }</span>
         } else {
-<span class="nc bnc" id="L67" title="All 2 branches missed.">            throw new CommandException(String.format(&quot;Invalid parameters for PLACE command: %s&quot;,</span>
-<span class="nc" id="L68">                    parameters == null ? &quot;&quot; : Arrays.asList(parameters)));</span>
+<span class="pc bpc" id="L67" title="1 of 2 branches missed.">            throw new CommandException(String.format(&quot;Invalid parameters for PLACE command: %s&quot;,</span>
+<span class="fc" id="L68">                    parameters == null ? &quot;&quot; : Arrays.asList(parameters)));</span>
         }
 <span class="fc" id="L70">    }</span>
 }
