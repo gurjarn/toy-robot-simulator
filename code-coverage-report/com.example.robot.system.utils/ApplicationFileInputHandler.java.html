@@ -2,7 +2,7 @@
 
 import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.StatusContext;
-import com.example.robot.commands.utils.CommandUtils;
+import com.example.robot.commands.service.CommandExecutor;
 import com.example.robot.system.data.ApplicationInputException;
 import org.apache.commons.cli.*;
 
@@ -49,26 +49,27 @@ import java.nio.file.Paths;
                 //read through the file and process each command
 <span class="fc" id="L50">                try(BufferedReader br = Files.newBufferedReader (Paths.get(inputFilePath))) {</span>
                     String line;
-<span class="fc bfc" id="L52" title="All 2 branches covered.">                    while ((line = br.readLine()) != null){</span>
-<span class="fc bfc" id="L53" title="All 2 branches covered.">                        if(!(line = line.trim()).isEmpty()</span>
-<span class="fc bfc" id="L54" title="All 2 branches covered.">                                &amp;&amp; !line.startsWith(&quot;#&quot;)){</span>
-<span class="fc" id="L55">                            context = CommandUtils.executeCommands(context,line);</span>
+<span class="fc" id="L52">                    CommandExecutor executor = new CommandExecutor();</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">                    while ((line = br.readLine()) != null){</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">                        if(!(line = line.trim()).isEmpty()</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">                                &amp;&amp; !line.startsWith(&quot;#&quot;)){</span>
+<span class="fc" id="L56">                            context = executor.executeCommands(context,line);</span>
                         }
                     }
-<span class="fc" id="L58">                } catch (IOException e) {</span>
+<span class="fc" id="L59">                } catch (IOException e) {</span>
                     //if it fails to read the file
-<span class="fc" id="L60">                    throw new ApplicationInputException(String.format(&quot;Failed to process input file %s. Message: %s&quot;,inputFilePath,e.getMessage()));</span>
-<span class="fc" id="L61">                }</span>
-<span class="pc bnc" id="L62" title="All 2 branches missed.">            }else if(cmd.getOptions().length &gt; 0){</span>
+<span class="fc" id="L61">                    throw new ApplicationInputException(String.format(&quot;Failed to process input file %s. Message: %s&quot;,inputFilePath,e.getMessage()));</span>
+<span class="fc" id="L62">                }</span>
+<span class="pc bnc" id="L63" title="All 2 branches missed.">            }else if(cmd.getOptions().length &gt; 0){</span>
                 //if some other option is provided. Notify correct usage
-<span class="nc" id="L64">                formatter.printHelp(&quot;toy-robot-simulator&quot;, options);</span>
+<span class="nc" id="L65">                formatter.printHelp(&quot;toy-robot-simulator&quot;, options);</span>
             }
-<span class="fc" id="L66">        } catch (ParseException e) {</span>
+<span class="fc" id="L67">        } catch (ParseException e) {</span>
             //if it fails to parse the option
-<span class="fc" id="L68">            formatter.printHelp(&quot;toy-robot-simulator&quot;, options);</span>
-<span class="fc" id="L69">        }</span>
+<span class="fc" id="L69">            formatter.printHelp(&quot;toy-robot-simulator&quot;, options);</span>
+<span class="fc" id="L70">        }</span>
         //returning original context
-<span class="fc" id="L71">        return context;</span>
+<span class="fc" id="L72">        return context;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -2,7 +2,7 @@ package com.example.robot.system.utils;
 
 import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.StatusContext;
-import com.example.robot.commands.utils.CommandUtils;
+import com.example.robot.commands.service.CommandExecutor;
 import com.example.robot.system.data.ApplicationInputException;
 import org.apache.commons.cli.*;
 
@@ -11,9 +11,20 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/**
+ * This class allows to pass commands through file option
+ */
 public class ApplicationFileInputHandler {
 
 
+    /**
+     * This mehtod will implement file processing
+     * @param args: Program arguments
+     * @param context: Status context
+     * @return StatusContext: Updated status context
+     * @throws ApplicationInputException
+     * @throws CommandException
+     */
     public StatusContext handleInput(String[] args, StatusContext context) throws ApplicationInputException, CommandException {
 
         Options options = new Options();
@@ -49,10 +60,11 @@ public class ApplicationFileInputHandler {
                 //read through the file and process each command
                 try(BufferedReader br = Files.newBufferedReader (Paths.get(inputFilePath))) {
                     String line;
+                    CommandExecutor executor = new CommandExecutor();
                     while ((line = br.readLine()) != null){
                         if(!(line = line.trim()).isEmpty()
                                 && !line.startsWith("#")){
-                            context = CommandUtils.executeCommands(context,line);
+                            context = executor.executeCommands(context,line);
                         }
                     }
                 } catch (IOException e) {

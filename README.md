@@ -85,7 +85,7 @@ Expected output
 
 # Implementation
 
-### Overarching design (Beta)
+### Overarching design
 
 The application is consisting of two components, user input and command execution
 
@@ -97,6 +97,15 @@ User can alternatively choose to provide file as an input containing list of com
 Each command will be interpreted and converted to a command (Command pattern) which will be executed on the given context. 
 A command will change the context based on the set of conditions and return the context back to the user input module to operate on next command
 
+All commands implement `ICommand` interface
+
+#### Adding a new command 
+e.g. JUMP 3,NORTH
+
+1. Create a class `JumpCommand` implementing `ICommand` and `IParameterized` interface. 
+The `IParameterized` interface is optional and should be implemented if a command needs to accept parameters.
+ 
+2. Add a new enum 'JUMP' in `CommandEnum`
 
 # Test cases
 

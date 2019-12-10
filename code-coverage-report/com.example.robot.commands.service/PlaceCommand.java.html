@@ -6,17 +6,18 @@ import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.DirectionEnum;
 import com.example.robot.commands.data.StatusContext;
 
-public class PlaceCommand {
+import java.util.Arrays;
+
+public class PlaceCommand implements ICommand, IParameterized{
 
     private int placeX;
     private int placeY;
     private DirectionEnum placeDirection;
 
-<span class="fc" id="L15">    public PlaceCommand(int placeX, int placeY, DirectionEnum placeDirection){</span>
-<span class="fc" id="L16">        this.placeX = placeX;</span>
-<span class="fc" id="L17">        this.placeY = placeY;</span>
-<span class="fc" id="L18">        this.placeDirection = placeDirection;</span>
+<span class="fc" id="L17">    public PlaceCommand(){</span>
+
 <span class="fc" id="L19">    }</span>
+
 
     /**
      * This method will apply current command parameters on the given context
@@ -24,25 +25,48 @@ public class PlaceCommand {
      * @return StatusContext: Updated status context
      * @throws CommandException: If invalid parameters are found. The message is 'Invalid command'
      */
+    @Override
     public StatusContext apply(StatusContext context) throws CommandException {
 
         //Check if the parameters are valid
-<span class="pc bpc" id="L30" title="2 of 8 branches missed.">        if(this.placeX &gt;= MIN_X_MOVEMENT</span>
+<span class="pc bpc" id="L32" title="2 of 8 branches missed.">        if(this.placeX &gt;= MIN_X_MOVEMENT</span>
                 &amp;&amp; this.placeX &lt;= MAX_X_MOVEMENT
                 &amp;&amp; this.placeY &gt;= MIN_Y_MOVEMENT
                 &amp;&amp; this.placeY &lt;= MAX_Y_MOVEMENT){
 
             //update current context of the robot
-<span class="fc" id="L36">            context.setPositionX(this.placeX);</span>
-<span class="fc" id="L37">            context.setPositionY(this.placeY);</span>
-<span class="fc" id="L38">            context.setDirection(this.placeDirection);</span>
-<span class="fc" id="L39">            context.setPlaced(true);</span>
+<span class="fc" id="L38">            context.setPositionX(this.placeX);</span>
+<span class="fc" id="L39">            context.setPositionY(this.placeY);</span>
+<span class="fc" id="L40">            context.setDirection(this.placeDirection);</span>
+<span class="fc" id="L41">            context.setPlaced(true);</span>
 
-<span class="fc" id="L41">            return context;</span>
+<span class="fc" id="L43">            return context;</span>
         }else{
             //invalid parameter
-<span class="fc" id="L44">            throw new CommandException(&quot;Invalid command&quot;);</span>
+<span class="fc" id="L46">            throw new CommandException(</span>
+<span class="fc" id="L47">                    String.format(&quot;Invalid parameters for PLACE command: [%d, %d, %s]&quot;,</span>
+<span class="fc" id="L48">                    this.placeX,</span>
+<span class="fc" id="L49">                    this.placeY,</span>
+                    this.placeDirection));
+
         }
     }
+
+    @Override
+    public void accept(String... parameters) throws CommandException {
+
+<span class="pc bpc" id="L58" title="2 of 4 branches missed.">        if(parameters != null &amp;&amp; parameters.length == 3){</span>
+            try {
+<span class="fc" id="L60">                this.placeX = Integer.parseInt(parameters[0]);</span>
+<span class="fc" id="L61">                this.placeY = Integer.parseInt(parameters[1]);</span>
+<span class="fc" id="L62">                this.placeDirection = DirectionEnum.valueOf(parameters[2]);</span>
+<span class="fc" id="L63">            }catch (IllegalArgumentException ne){</span>
+<span class="fc" id="L64">                throw new CommandException(String.format(&quot;Invalid parameters for PLACE command: %s&quot;, Arrays.asList(parameters)));</span>
+<span class="fc" id="L65">            }</span>
+        } else {
+<span class="nc bnc" id="L67" title="All 2 branches missed.">            throw new CommandException(String.format(&quot;Invalid parameters for PLACE command: %s&quot;,</span>
+<span class="nc" id="L68">                    parameters == null ? &quot;&quot; : Arrays.asList(parameters)));</span>
+        }
+<span class="fc" id="L70">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

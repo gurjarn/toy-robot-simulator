@@ -2,7 +2,7 @@ package com.example.robot.commands;
 
 import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.StatusContext;
-import com.example.robot.commands.utils.CommandUtils;
+import com.example.robot.commands.service.CommandExecutor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -29,7 +29,8 @@ public class CommandsTest {
         StatusContext context = new StatusContext();
         String actual;
         try {
-            context = CommandUtils.executeCommands(context,commands);
+            CommandExecutor executor = new CommandExecutor();
+            context = executor.executeCommands(context,commands);
             actual = context.toString();
         } catch (CommandException e) {
             actual = e.getMessage();

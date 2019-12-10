@@ -4,7 +4,7 @@ import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.DirectionEnum;
 import com.example.robot.commands.data.StatusContext;
 
-public class LeftCommand {
+public class LeftCommand implements ICommand{
 
 <span class="fc" id="L9">    public LeftCommand(){</span>
 <span class="fc" id="L10">    }</span>
@@ -15,26 +15,27 @@ public class LeftCommand {
      * @return StatusContext: Updated status context
      * @throws CommandException: If invalid parameters are found. The message is 'Invalid command'
      */
+    @Override
     public StatusContext apply(StatusContext context) throws CommandException {
 
-<span class="fc bfc" id="L20" title="All 2 branches covered.">            if(context.isPlaced()){</span>
-<span class="pc bpc" id="L21" title="1 of 5 branches missed.">                switch(context.getDirection()){</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">            if(context.isPlaced()){</span>
+<span class="pc bpc" id="L22" title="1 of 5 branches missed.">                switch(context.getDirection()){</span>
                     case NORTH:
-<span class="fc" id="L23">                        context.setDirection(DirectionEnum.WEST);</span>
-<span class="fc" id="L24">                        break;</span>
+<span class="fc" id="L24">                        context.setDirection(DirectionEnum.WEST);</span>
+<span class="fc" id="L25">                        break;</span>
                     case EAST:
-<span class="fc" id="L26">                        context.setDirection(DirectionEnum.NORTH);</span>
-<span class="fc" id="L27">                        break;</span>
+<span class="fc" id="L27">                        context.setDirection(DirectionEnum.NORTH);</span>
+<span class="fc" id="L28">                        break;</span>
                     case SOUTH:
-<span class="fc" id="L29">                        context.setDirection(DirectionEnum.EAST);</span>
-<span class="fc" id="L30">                        break;</span>
+<span class="fc" id="L30">                        context.setDirection(DirectionEnum.EAST);</span>
+<span class="fc" id="L31">                        break;</span>
                     case WEST:
-<span class="fc" id="L32">                        context.setDirection(DirectionEnum.SOUTH);</span>
+<span class="fc" id="L33">                        context.setDirection(DirectionEnum.SOUTH);</span>
                         break;
                 }
-<span class="fc" id="L35">                return context;</span>
+<span class="fc" id="L36">                return context;</span>
             } else{
-<span class="fc" id="L37">               throw new CommandException(&quot;Please use PLACE command to begin&quot;);</span>
+<span class="fc" id="L38">               throw new CommandException(&quot;Please use PLACE command to begin&quot;);</span>
             }
     }
 }
