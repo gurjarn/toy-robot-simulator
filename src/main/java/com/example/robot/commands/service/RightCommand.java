@@ -4,7 +4,7 @@ import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.DirectionEnum;
 import com.example.robot.commands.data.StatusContext;
 
-public class RightCommand {
+public class RightCommand implements ICommand{
 
     public RightCommand(){
     }
@@ -15,6 +15,7 @@ public class RightCommand {
      * @return StatusContext: Updated status context
      * @throws CommandException: If invalid parameters are found. The message is 'Invalid command'
      */
+    @Override
     public StatusContext apply(StatusContext context) throws CommandException {
 
             if(context.isPlaced()){

@@ -5,7 +5,7 @@ import com.example.robot.commands.data.StatusContext;
 
 import static com.example.robot.commands.data.Constants.*;
 
-public class MoveCommand {
+public class MoveCommand implements  ICommand{
 
 <span class="fc" id="L10">    public MoveCommand(){</span>
 <span class="fc" id="L11">    }</span>
@@ -16,38 +16,39 @@ public class MoveCommand {
      * @return StatusContext: Updated status context
      * @throws CommandException: If invalid parameters are found. The message is 'Invalid command'
      */
+    @Override
     public StatusContext apply(StatusContext context) throws CommandException {
 
-<span class="fc bfc" id="L21" title="All 2 branches covered.">            if(context.isPlaced()){</span>
-<span class="fc" id="L22">                int newPositionX = context.getPositionX();</span>
-<span class="fc" id="L23">                int newPositionY = context.getPositionY();</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">            if(context.isPlaced()){</span>
+<span class="fc" id="L23">                int newPositionX = context.getPositionX();</span>
+<span class="fc" id="L24">                int newPositionY = context.getPositionY();</span>
 
-<span class="pc bpc" id="L25" title="1 of 5 branches missed.">                switch(context.getDirection()){</span>
+<span class="pc bpc" id="L26" title="1 of 5 branches missed.">                switch(context.getDirection()){</span>
                     case NORTH:
-<span class="fc" id="L27">                        newPositionY += 1;</span>
-<span class="fc" id="L28">                        break;</span>
+<span class="fc" id="L28">                        newPositionY += 1;</span>
+<span class="fc" id="L29">                        break;</span>
                     case EAST:
-<span class="fc" id="L30">                        newPositionX += 1;</span>
-<span class="fc" id="L31">                        break;</span>
+<span class="fc" id="L31">                        newPositionX += 1;</span>
+<span class="fc" id="L32">                        break;</span>
                     case SOUTH:
-<span class="fc" id="L33">                        newPositionY -= 1;</span>
-<span class="fc" id="L34">                        break;</span>
+<span class="fc" id="L34">                        newPositionY -= 1;</span>
+<span class="fc" id="L35">                        break;</span>
                     case WEST:
-<span class="fc" id="L36">                        newPositionX -= 1;</span>
+<span class="fc" id="L37">                        newPositionX -= 1;</span>
                         break;
                 }
-<span class="fc bfc" id="L39" title="All 8 branches covered.">                if(newPositionX &gt;= MIN_X_MOVEMENT</span>
+<span class="fc bfc" id="L40" title="All 8 branches covered.">                if(newPositionX &gt;= MIN_X_MOVEMENT</span>
                         &amp;&amp; newPositionX &lt;= MAX_X_MOVEMENT
                         &amp;&amp; newPositionY &gt;= MIN_Y_MOVEMENT
                         &amp;&amp; newPositionY &lt;= MAX_Y_MOVEMENT) {
 
                     //update current context of the robot
-<span class="fc" id="L45">                    context.setPositionX(newPositionX);</span>
-<span class="fc" id="L46">                    context.setPositionY(newPositionY);</span>
+<span class="fc" id="L46">                    context.setPositionX(newPositionX);</span>
+<span class="fc" id="L47">                    context.setPositionY(newPositionY);</span>
                 }
-<span class="fc" id="L48">                return context;</span>
+<span class="fc" id="L49">                return context;</span>
             } else{
-<span class="fc" id="L50">               throw new CommandException(&quot;Please use PLACE command to begin&quot;);</span>
+<span class="fc" id="L51">               throw new CommandException(&quot;Please use PLACE command to begin&quot;);</span>
             }
     }
 }

@@ -15,6 +15,11 @@ public class StatusContext implements Serializable {
 
     private boolean isPlaced;
 
+
+    /**
+     * TODO: The display responsibility can be moved to different IOutput classes using SOLID principal
+     * @return
+     */
     @Override
     public String toString(){
         return String.format("%d,%d,%s",getPositionX(),getPositionY(),getDirection());
