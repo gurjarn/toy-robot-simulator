@@ -102,7 +102,8 @@ A command will change the context based on the set of conditions and return the 
 
 There are two test case files to test each component.
 `com.example.robot.commands.CommandsTest`
-`com.example.robot.ApplicationTest`
+`com.example.robot.system.ApplicationFileInputHandlerTest`
+`com.example.robot.system.ApplicationConsoleInputHandlerTest`
 
 The `CommandsTest` is parameterized and takes its test parameters from resource file `src/test/resources/command_test.csv`
 
@@ -114,7 +115,8 @@ MOVE
 REPORT",
 ```
 
-`ApplicationTest` is for user input module
+`ApplicationFileInputHandlerTest` is for user file input module
+`ApplicationConsoleInputHandlerTest` is for user file input module
 
 # Installation
 
@@ -125,15 +127,17 @@ This project is tested to build on Java 8. It uses Maven as its build system, an
 To build the project with unit test cases
 
 ```
-mvn clean install 
+mvn clean verify 
 ```
 
 # Execution
 
+Run program in user interactive mode
 ```
 java -jar target/toy-robot-simulator.jar 
 ```
-Example:
+
+Run program with file input
 ```
-java -jar target/toy-robot-simulator.jar 
+java -jar target/toy-robot-simulator.jar --file src/test/resources/file_input_test1.txt
 ```
