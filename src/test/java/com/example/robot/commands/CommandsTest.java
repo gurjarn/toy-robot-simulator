@@ -1,8 +1,6 @@
 package com.example.robot.commands;
 
-import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.StatusContext;
-import com.example.robot.commands.service.CommandExecutor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -15,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
  * Please cover list of commands in double quotes to treat it as a row in CSV parsing
  *
  */
-public class CommandsTest {
+public class CommandsTest extends BaseCommandTest{
 
     /**
      *
@@ -27,17 +25,7 @@ public class CommandsTest {
     public void testOperation(String expected, String commandList) {
 
         StatusContext context = new StatusContext();
-        String actual;
-        CommandExecutor executor = new CommandExecutor();
-        try {
-
-            for (String commandInput : commandList.split("[\\r\\n]+")){
-                context = executor.executeCommand(context,commandInput);
-            }
-            actual = context.toString();
-        } catch (CommandException e) {
-            actual = e.getMessage();
-        }
+        String actual = executeCommand(context,commandList);
         Assertions.assertEquals(expected,actual);
     }
 }
