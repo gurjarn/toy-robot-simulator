@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.robot.system.ApplicationConsoleInputHandlerTest" time="1.719" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.robot.commands.PlaceCommandTest" time="0.054" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -61,7 +61,20 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testUserInputValidSelection" classname="com.example.robot.system.ApplicationConsoleInputHandlerTest" time="0.084"/>
-  <testcase name="testUserInputInvalidText" classname="com.example.robot.system.ApplicationConsoleInputHandlerTest" time="0.009"/>
-  <testcase name="testUserInputInvalidSelection" classname="com.example.robot.system.ApplicationConsoleInputHandlerTest" time="0.006"/>
+  <testcase name="testOperation{String, String}[1]" classname="com.example.robot.commands.PlaceCommandTest" time="0"/>
+  <testcase name="testOperation{String, String}[2]" classname="com.example.robot.commands.PlaceCommandTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[3]" classname="com.example.robot.commands.PlaceCommandTest" time="0"/>
+  <testcase name="testOperation{String, String}[4]" classname="com.example.robot.commands.PlaceCommandTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[5]" classname="com.example.robot.commands.PlaceCommandTest" time="0"/>
+  <testcase name="testOperation{String, String}[6]" classname="com.example.robot.commands.PlaceCommandTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[7]" classname="com.example.robot.commands.PlaceCommandTest" time="0.003"/>
+  <testcase name="testOperation{String, String}[8]" classname="com.example.robot.commands.PlaceCommandTest" time="0"/>
+  <testcase name="testOperation{String, String}[9]" classname="com.example.robot.commands.PlaceCommandTest" time="0.003"/>
+  <testcase name="testOperation{String, String}[10]" classname="com.example.robot.commands.PlaceCommandTest" time="0.002"/>
+  <testcase name="testOperation{String, String}[11]" classname="com.example.robot.commands.PlaceCommandTest" time="0.003"/>
+  <testcase name="testOperation{String, String}[12]" classname="com.example.robot.commands.PlaceCommandTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[13]" classname="com.example.robot.commands.PlaceCommandTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[14]" classname="com.example.robot.commands.PlaceCommandTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[15]" classname="com.example.robot.commands.PlaceCommandTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[16]" classname="com.example.robot.commands.PlaceCommandTest" time="0.002"/>
 </testsuite>

@@ -159,11 +159,11 @@ and auto scanning all available commands in the program. This will make addition
 # Test cases
 
 Test case classes:
-`com.example.robot.commands.CommandsTest`
+`com.example.robot.commands.*Test`
 `com.example.robot.system.ApplicationFileInputHandlerTest`
 `com.example.robot.system.ApplicationConsoleInputHandlerTest`
 
-The `CommandsTest` is parameterized and takes its test parameters from resource file `src/test/resources/command_test.csv`
+There are multiple command test classes in package `com.example.robot.commands.*Test`. They are parameterized and takes its test parameters from resource file `src/test/resources/*.csv`
 
 Sample data in `command_test.csv` file
 ```$xslt
@@ -175,6 +175,21 @@ REPORT",
 
 `ApplicationFileInputHandlerTest` is for testing user file input module
 `ApplicationConsoleInputHandlerTest` is for testing user file input module
+
+#### Adding a new command test cases
+1. Create a new test class `<command-name>CommandTest extends BaseCommandTest`
+2. Create a corresponding resource file in `src/test/resources/<command-name>_command_test.csv`
+
+```
+    @ParameterizedTest
+    @CsvFileSource(resources = "/<command-name>_command_test.csv")
+    public void testOperation(String expected, String commands) {
+
+        StatusContext context = new StatusContext();
+        String actual = executeCommand(context,commands);
+        Assertions.assertEquals(expected,actual);
+    }
+```
 
 # Installation
 

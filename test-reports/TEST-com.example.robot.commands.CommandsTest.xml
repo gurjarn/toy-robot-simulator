@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.robot.commands.CommandsTest" time="1.376" tests="61" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.robot.commands.CommandsTest" time="0.418" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -7,118 +7,67 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="D:\data\intJWorkspace\toy-robot-simulator\target\test-classes;D:\data\intJWorkspace\toy-robot-simulator\target\classes;C:\Users\d856023\.m2\repository\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\d856023\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\d856023\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\d856023\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\d856023\.m2\repository\org\mockito\mockito-core\2.28.2\mockito-core-2.28.2.jar;C:\Users\d856023\.m2\repository\net\bytebuddy\byte-buddy\1.9.10\byte-buddy-1.9.10.jar;C:\Users\d856023\.m2\repository\net\bytebuddy\byte-buddy-agent\1.9.10\byte-buddy-agent-1.9.10.jar;C:\Users\d856023\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;"/>
+    <property name="java.class.path" value="C:\data\intJWorkspace\toy-robot-simulator\target\test-classes;C:\data\intJWorkspace\toy-robot-simulator\target\classes;C:\Users\d856023\.m2\repository\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\d856023\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\d856023\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\d856023\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\d856023\.m2\repository\org\mockito\mockito-core\2.28.2\mockito-core-2.28.2.jar;C:\Users\d856023\.m2\repository\net\bytebuddy\byte-buddy\1.9.10\byte-buddy-1.9.10.jar;C:\Users\d856023\.m2\repository\net\bytebuddy\byte-buddy-agent\1.9.10\byte-buddy-agent-1.9.10.jar;C:\Users\d856023\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="user.timezone" value="Australia/Sydney"/>
     <property name="java.vm.specification.version" value="1.8"/>
-    <property name="os.name" value="Windows 7"/>
+    <property name="os.name" value="Windows 10"/>
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.boot.library.path" value="D:\data\softwares\Java\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\d856023\AppData\Local\Temp\surefire2418848333568965615\surefirebooter1454685324431021419.jar C:\Users\d856023\AppData\Local\Temp\surefire2418848333568965615 2019-12-11T10-10-22_433-jvmRun1 surefire2799254441961902248tmp surefire_01874493969110431053tmp"/>
-    <property name="surefire.test.class.path" value="D:\data\intJWorkspace\toy-robot-simulator\target\test-classes;D:\data\intJWorkspace\toy-robot-simulator\target\classes;C:\Users\d856023\.m2\repository\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\d856023\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\d856023\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\d856023\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\d856023\.m2\repository\org\mockito\mockito-core\2.28.2\mockito-core-2.28.2.jar;C:\Users\d856023\.m2\repository\net\bytebuddy\byte-buddy\1.9.10\byte-buddy-1.9.10.jar;C:\Users\d856023\.m2\repository\net\bytebuddy\byte-buddy-agent\1.9.10\byte-buddy-agent-1.9.10.jar;C:\Users\d856023\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;"/>
+    <property name="sun.boot.library.path" value="C:\data\softwares\jdk1.8.0_231\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\d856023\AppData\Local\Temp\surefire9003404894375113653\surefirebooter2334851945420001242.jar C:\Users\d856023\AppData\Local\Temp\surefire9003404894375113653 2019-12-20T14-36-59_593-jvmRun1 surefire5866088241860658353tmp surefire_07099836250194823457tmp"/>
+    <property name="surefire.test.class.path" value="C:\data\intJWorkspace\toy-robot-simulator\target\test-classes;C:\data\intJWorkspace\toy-robot-simulator\target\classes;C:\Users\d856023\.m2\repository\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\d856023\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\d856023\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\d856023\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\d856023\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\d856023\.m2\repository\org\mockito\mockito-core\2.28.2\mockito-core-2.28.2.jar;C:\Users\d856023\.m2\repository\net\bytebuddy\byte-buddy\1.9.10\byte-buddy-1.9.10.jar;C:\Users\d856023\.m2\repository\net\bytebuddy\byte-buddy-agent\1.9.10\byte-buddy-agent-1.9.10.jar;C:\Users\d856023\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\d856023"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.home" value="D:\data\softwares\Java\jre"/>
-    <property name="basedir" value="D:\data\intJWorkspace\toy-robot-simulator"/>
+    <property name="java.home" value="C:\data\softwares\jdk1.8.0_231\jre"/>
+    <property name="basedir" value="C:\data\intJWorkspace\toy-robot-simulator"/>
     <property name="file.separator" value="\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\d856023\AppData\Local\Temp\surefire2418848333568965615\surefirebooter1454685324431021419.jar;C:\\Users\\d856023\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.2\\org.jacoco.agent-0.8.2-runtime.jar"/>
-    <property name="sun.boot.class.path" value="D:\data\softwares\Java\jre\lib\resources.jar;D:\data\softwares\Java\jre\lib\rt.jar;D:\data\softwares\Java\jre\lib\sunrsasign.jar;D:\data\softwares\Java\jre\lib\jsse.jar;D:\data\softwares\Java\jre\lib\jce.jar;D:\data\softwares\Java\jre\lib\charsets.jar;D:\data\softwares\Java\jre\lib\jfr.jar;D:\data\softwares\Java\jre\classes"/>
+    <property name="surefire.real.class.path" value="C:\Users\d856023\AppData\Local\Temp\surefire9003404894375113653\surefirebooter2334851945420001242.jar;C:\\Users\\d856023\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.2\\org.jacoco.agent-0.8.2-runtime.jar"/>
+    <property name="sun.boot.class.path" value="C:\data\softwares\jdk1.8.0_231\jre\lib\resources.jar;C:\data\softwares\jdk1.8.0_231\jre\lib\rt.jar;C:\data\softwares\jdk1.8.0_231\jre\lib\sunrsasign.jar;C:\data\softwares\jdk1.8.0_231\jre\lib\jsse.jar;C:\data\softwares\jdk1.8.0_231\jre\lib\jce.jar;C:\data\softwares\jdk1.8.0_231\jre\lib\charsets.jar;C:\data\softwares\jdk1.8.0_231\jre\lib\jfr.jar;C:\data\softwares\jdk1.8.0_231\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="1.8.0_151-b12"/>
+    <property name="java.runtime.version" value="1.8.0_231-b11"/>
     <property name="user.name" value="d856023"/>
     <property name="path.separator" value=";"/>
-    <property name="os.version" value="6.1"/>
-    <property name="java.endorsed.dirs" value="D:\data\softwares\Java\jre\lib\endorsed"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\data\softwares\jdk1.8.0_231\jre\lib\endorsed"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\d856023\.m2\repository"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\d856023\AppData\Local\Temp\"/>
-    <property name="java.version" value="1.8.0_151"/>
-    <property name="user.dir" value="D:\data\intJWorkspace\toy-robot-simulator"/>
+    <property name="java.version" value="1.8.0_231"/>
+    <property name="user.dir" value="C:\data\intJWorkspace\toy-robot-simulator"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
-    <property name="sun.os.patch.level" value="Service Pack 1"/>
-    <property name="java.library.path" value="D:\data\softwares\Java\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\d856023\bin;D:\data\softwares\Git\mingw64\bin;D:\data\softwares\Git\usr\local\bin;D:\data\softwares\Git\usr\bin;D:\data\softwares\Git\usr\bin;D:\data\softwares\Git\mingw64\bin;D:\data\softwares\Git\usr\bin;C:\Users\d856023\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Microsoft Application Virtualization Client;C:\Program Files (x86)\Lenovo\Access Connections;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Sennheiser\SoftphoneSDK;D:\data\softwares\Java\bin;C:\Program Files (x86)\Google\Chrome\Application;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Microsoft Application Virtualization Client;C:\Program Files (x86)\Lenovo\Access Connections;C:\Program Files (x86)\Enterprise Vault\EVClient;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Docker Toolbox;C:\Users\d856023\AppData\Local\atom\bin;D:\data\softwares\spark-2.4.0-bin-hadoop2.7\bin;D:\data\softwares\sbt-1.2.8\sbt\bin;D:\data\softwares\apache-maven-3.5.2\bin;D:\data\softwares\kafka\kafka_2.12-2.3.1\bin\windows;D:\data\softwares\Git\usr\bin\vendor_perl;D:\data\softwares\Git\usr\bin\core_perl;."/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\data\softwares\jdk1.8.0_231\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Sennheiser\SoftphoneSDK\;C:\Users\d856023\AppData\Local\Microsoft\WindowsApps;C:\data\softwares\JetBrains\bin;;C:\data\softwares\Git\cmd;."/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="25.151-b12"/>
-    <property name="java.ext.dirs" value="D:\data\softwares\Java\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="java.vm.version" value="25.231-b11"/>
+    <property name="idea.version2019.3" value="true"/>
+    <property name="java.ext.dirs" value="C:\data\softwares\jdk1.8.0_231\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testOperation{String, String}[1]" classname="com.example.robot.commands.CommandsTest" time="0.289"/>
-  <testcase name="testOperation{String, String}[2]" classname="com.example.robot.commands.CommandsTest" time="0.02"/>
-  <testcase name="testOperation{String, String}[3]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[4]" classname="com.example.robot.commands.CommandsTest" time="0"/>
+  <testcase name="testOperation{String, String}[1]" classname="com.example.robot.commands.CommandsTest" time="0.171"/>
+  <testcase name="testOperation{String, String}[2]" classname="com.example.robot.commands.CommandsTest" time="0.028"/>
+  <testcase name="testOperation{String, String}[3]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[4]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
   <testcase name="testOperation{String, String}[5]" classname="com.example.robot.commands.CommandsTest" time="0"/>
   <testcase name="testOperation{String, String}[6]" classname="com.example.robot.commands.CommandsTest" time="0"/>
   <testcase name="testOperation{String, String}[7]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[8]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
+  <testcase name="testOperation{String, String}[8]" classname="com.example.robot.commands.CommandsTest" time="0"/>
   <testcase name="testOperation{String, String}[9]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[10]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[11]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[12]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[13]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[14]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[15]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[16]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[17]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[18]" classname="com.example.robot.commands.CommandsTest" time="0.008"/>
-  <testcase name="testOperation{String, String}[19]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[20]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[21]" classname="com.example.robot.commands.CommandsTest" time="0.045"/>
-  <testcase name="testOperation{String, String}[22]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
-  <testcase name="testOperation{String, String}[23]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[24]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[25]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[26]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
-  <testcase name="testOperation{String, String}[27]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[28]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[29]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
-  <testcase name="testOperation{String, String}[30]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[31]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
-  <testcase name="testOperation{String, String}[32]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[33]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[34]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[35]" classname="com.example.robot.commands.CommandsTest" time="0.015"/>
-  <testcase name="testOperation{String, String}[36]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[37]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[38]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[39]" classname="com.example.robot.commands.CommandsTest" time="0.009"/>
-  <testcase name="testOperation{String, String}[40]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[41]" classname="com.example.robot.commands.CommandsTest" time="0.082"/>
-  <testcase name="testOperation{String, String}[42]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[43]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[44]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
-  <testcase name="testOperation{String, String}[45]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[46]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[47]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[48]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[49]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[50]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
-  <testcase name="testOperation{String, String}[51]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[52]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[53]" classname="com.example.robot.commands.CommandsTest" time="0.001"/>
-  <testcase name="testOperation{String, String}[54]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[55]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[56]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[57]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[58]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[59]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[60]" classname="com.example.robot.commands.CommandsTest" time="0"/>
-  <testcase name="testOperation{String, String}[61]" classname="com.example.robot.commands.CommandsTest" time="0"/>
 </testsuite>
