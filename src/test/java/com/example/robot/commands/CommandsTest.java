@@ -20,17 +20,20 @@ public class CommandsTest {
     /**
      *
      * @param expected: expected message from the execution of commands. This is the first parameter
-     * @param commands: list of commands to be executed. This is second parameter
+     * @param commandList: list of commands to be executed. This is second parameter
      */
     @ParameterizedTest
     @CsvFileSource(resources = "/command_test.csv")
-    public void testOperation(String expected, String commands) {
+    public void testOperation(String expected, String commandList) {
 
         StatusContext context = new StatusContext();
         String actual;
+        CommandExecutor executor = new CommandExecutor();
         try {
-            CommandExecutor executor = new CommandExecutor();
-            context = executor.executeCommands(context,commands);
+
+            for (String commandInput : commandList.split("[\\r\\n]+")){
+                context = executor.executeCommand(context,commandInput);
+            }
             actual = context.toString();
         } catch (CommandException e) {
             actual = e.getMessage();

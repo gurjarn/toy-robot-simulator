@@ -11,6 +11,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * This class allows to pass commands through file option
@@ -23,8 +25,8 @@ public class ApplicationFileInputHandler implements IApplicationUserInputHandler
      * @param args: Program arguments
      * @param context: Status context
      * @return StatusContext: Updated status context
-     * @throws ApplicationInputException
-     * @throws CommandException
+     * @throws ApplicationInputException: User input exception
+     * @throws CommandException: Command execution exception
      */
     @Override
     public StatusContext handleInput(String[] args, StatusContext context) throws ApplicationInputException, CommandException {
@@ -66,7 +68,7 @@ public class ApplicationFileInputHandler implements IApplicationUserInputHandler
                     while ((line = br.readLine()) != null){
                         if(!(line = line.trim()).isEmpty()
                                 && !line.startsWith("#")){
-                            context = executor.executeCommands(context,line);
+                            context = executor.executeCommand(context,line);
                         }
                     }
                 } catch (IOException e) {
