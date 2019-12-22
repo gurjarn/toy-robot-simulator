@@ -1,8 +1,10 @@
 package com.example.robot.commands.service;
 
 import com.example.robot.commands.data.CommandException;
-import com.example.robot.commands.data.StatusContext;
+
+import java.util.List;
 
 public interface IParameterized {
-    void accept(String... parameters) throws CommandException;
+    void accept(List<String> parameters) throws CommandException;
+    List<String> askFor();
 }

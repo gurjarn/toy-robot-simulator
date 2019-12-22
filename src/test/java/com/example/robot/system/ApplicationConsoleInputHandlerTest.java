@@ -1,6 +1,5 @@
 package com.example.robot.system;
 
-import com.example.robot.Application;
 import com.example.robot.commands.data.CommandEnum;
 import com.example.robot.commands.data.CommandException;
 import com.example.robot.commands.data.StatusContext;

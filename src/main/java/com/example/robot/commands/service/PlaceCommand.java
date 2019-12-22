@@ -7,6 +7,7 @@ import com.example.robot.commands.data.DirectionEnum;
 import com.example.robot.commands.data.StatusContext;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class PlaceCommand implements ICommand, IParameterized{
 
@@ -44,7 +45,7 @@ public class PlaceCommand implements ICommand, IParameterized{
         }else{
             //invalid parameter
             throw new CommandException(
-                    String.format("Invalid parameters for PLACE command: [%d, %d, %s]",
+                    String.format("Invalid parameters for PLACE command: [%d,%d,%s]",
                     this.placeX,
                     this.placeY,
                     this.placeDirection));
@@ -53,19 +54,32 @@ public class PlaceCommand implements ICommand, IParameterized{
     }
 
     @Override
-    public void accept(String... parameters) throws CommandException {
+    public void accept(List<String> parameters) throws CommandException {
 
-        if(parameters != null && parameters.length == 3){
+        String errorMessage = String.format("Invalid parameters for PLACE command: %s",
+                parameters == null ? "" : parameters);
+
+        if(parameters != null && parameters.size() == 1){
             try {
-                this.placeX = Integer.parseInt(parameters[0]);
-                this.placeY = Integer.parseInt(parameters[1]);
-                this.placeDirection = DirectionEnum.valueOf(parameters[2]);
+                //e.g. 1,2,NORTH
+                String[] arguments = parameters.get(0).trim().split(",");
+                if(arguments.length == 3) {
+                    this.placeX = Integer.parseInt(arguments[0]);
+                    this.placeY = Integer.parseInt(arguments[1]);
+                    this.placeDirection = DirectionEnum.valueOf(arguments[2]);
+                }else{
+                    throw new CommandException(errorMessage);
+                }
             }catch (IllegalArgumentException ne){
-                throw new CommandException(String.format("Invalid parameters for PLACE command: %s", Arrays.asList(parameters)));
+                throw new CommandException(errorMessage);
             }
         } else {
-            throw new CommandException(String.format("Invalid parameters for PLACE command: %s",
-                    parameters == null ? "" : Arrays.asList(parameters)));
+            throw new CommandException(errorMessage);
         }
+    }
+
+    @Override
+    public List<String> askFor(){
+        return Arrays.asList("Parameters for PLACE command e.g. 1,2,NORTH:");
     }
 }

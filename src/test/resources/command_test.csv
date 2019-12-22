@@ -49,11 +49,12 @@ REPORT",
 
 # Testing PLACE command with invalid positions
 
-"Invalid parameters for PLACE command: [4, 5, EAST]","PLACE 4,5,EAST",
-"Invalid parameters for PLACE command: [5, 1, WEST]","PLACE 5,1,WEST",
-"Invalid parameters for PLACE command: [6, 5, NORTH]","PLACE 6,5,NORTH",
-"Invalid parameters for PLACE command: [10, 11, SOUTH]","PLACE 10,11,SOUTH",
-"Invalid parameters for PLACE command: [10, 11, NORTHWEST]","PLACE 10,11,NORTHWEST",
+"Invalid parameters for PLACE command: [4,5,EAST]","PLACE 4,5,EAST",
+"Invalid parameters for PLACE command: [5,1,WEST]","PLACE 5,1,WEST",
+"Invalid parameters for PLACE command: [6,5,NORTH]","PLACE 6,5,NORTH",
+"Invalid parameters for PLACE command: [6,NORTH]","PLACE 6,NORTH",
+"Invalid parameters for PLACE command: [10,11,SOUTH]","PLACE 10,11,SOUTH",
+"Invalid parameters for PLACE command: [10,11,NORTHWEST]","PLACE 10,11,NORTHWEST",
 "Invalid parameters for PLACE command: []","PLACE ",
 "Invalid command: JUMP","JUMP",
 "Invalid command","",
